@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://style.fluig.com/css/fluig-style-guide.min.css"
+    />
+    <link rel="stylesheet" href="/src/style/globalStyle.css">
+    <script src="/portal/resources/js/jquery/jquery.js"></script>
+    <script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script src="/portal/resources/js/mustache/mustache-min.js"></script>
+    <script src="/style-guide/js/fluig-style-guide.min.js"></script>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="fluig-style-guide">
+      <h2 class="title-page">CADASTRO FORNECEDOR/PRODUTO</h2>
+      <div class="box-form">
+        <form class="form-horizontal" role="form">
+          <div class="first-quadrant">
+            <div class="box-1">
+              <div class="form-group col-xs-12">
+                <label for="razaoSocial">Razão Social</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="razaoSocial"
+                  required
+                />
+              </div>
+              <div class="form-group col-xs-12">
+                <label for="nomeFantasia">Nome Fantasia</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nomeFantasia"
+                  required
+                />
+              </div>
+              <div id="cep" class="form-group col-xs-8">
+                <label for="cep">CEP</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cep"
+                  required
+                />
+              </div>
+              <div class="form-group col-xs-12">
+                <label for="endereco">Endereço</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="endereco"
+                  required
+                />
+              </div>
+            </div>
+            <div class="box-2">
+              <div class="form-group col-xs-12">
+                <label for="cnpj">CNPJ</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cnpj"
+                  required
+                />
+              </div>
+              <div class="form-group col-xs-12">
+                <label for="inscricaoEstadual">Inscrição Estadual</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inscricaoEstadual"
+                />
+              </div>
+              <div class="form-group col-xs-12">
+                <label for="inscricaoMunicipal">Inscrição Municipal</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inscricaoMunicipal"
+                />
+              </div>
+              <div class="form-group col-xs-12">
+                <label for="numero">Número</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="numero"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="second-quadrant">
+            <div class="form-group col-xs-12">
+              <label for="complemento">Complemento</label>
+              <input
+                type="text"
+                class="form-control"
+                id="complemento"
+              />
+            </div>
+            <div class="box-3">
+              <div class="form-group col-xs-4">
+                <label for="bairro">Bairro</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bairro"
+                  required
+                />
+              </div>
+              <div class="form-group col-xs-4">
+                <label for="municipio">Município</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="municipio"
+                  required
+                />
+              </div>
+              <div class="form-group col-xs-4">
+                <label for="estado">Estado</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="estado"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="third-quadrant">
+            <div class="box-4">
+              <div class="form-group col-xs-5">
+                <label for="nomepessoacontato">Nome da Pessoa de Contato</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nomepessoacontato"
+                  required
+                />
+              </div>
+              <div class="form-group col-xs-4">
+                <label for="telefone">Telefone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="telefone"
+                  required
+                />
+              </div>
+              <div class="form-group col-xs-4">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
