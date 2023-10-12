@@ -1,5 +1,41 @@
+.fluig-style-guide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
 .title-page {
   text-align: center;
+}
+
+.form-control[type="text"] {
+  border: 0.2rem solid black;
+  border-radius: 0.4rem; /* Adicionando um raio de borda para suavizar as extremidades */
+}
+
+/* Estilizando os inputs de e-mail */
+.form-control[type="email"] {
+  border: 0.2rem solid black;
+  border-radius: 0.4rem; /* Adicionando um raio de borda para suavizar as extremidades */
+}
+
+.form-group label {
+  text-align: left; /* Alinha o texto das labels à esquerda */
+  display: block; /* Garante que cada label seja exibida em uma nova linha */
+  margin-bottom: 0.1rem; /* Adiciona um pequeno espaço entre as labels */
+  padding-left: 0.4rem;
+  color: black;
+}
+
+.quadrants {
+  border: 0.2rem solid black;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 /* Estilizando os elementos dentro de "box-1" e "box-2" */
@@ -11,6 +47,8 @@
 .box-form .first-quadrant .box-1,
 .box-form .first-quadrant .box-2 {
   width: 48%; /* Para deixar um pequeno espaço entre os conteúdos */
+  flex: 1; /* Para que as divs tenham a mesma largura */
+  margin: 0 0.2rem; /* Espaçamento entre as divs */
 }
 
 .box-form .first-quadrant .form-group {
@@ -39,7 +77,6 @@
 .box-2 .form-group {
   margin-bottom: 10px; /* Adiciona espaço entre os elementos */
 }
-
 
 body, html {
   height: 100%;
