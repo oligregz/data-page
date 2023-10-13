@@ -50,10 +50,15 @@
   box-sizing: border-box;
   overflow: hidden; /* Adicionado para esconder o overflow se houver */
 }
+
 .product .box-product .details-product {
   display: flex;
   flex-wrap: nowrap; /* Impede que os filhos quebrem para a próxima linha */
   overflow: auto; /* Adicionado para permitir rolagem horizontal se necessário */
+}
+
+.box-product .lixeira-icon:hover {
+  cursor: pointer;
 }
 
 /* Ajuste na largura dos filhos de .details-product */
@@ -115,4 +120,30 @@ ul {
 
 .btn-group {
   font-size: 0.2rem;
+}
+
+/* Estilos para a classe "title-form" */
+.title-form {
+  background-color: rgb(64, 189, 230);
+  color: white;
+  padding: 1rem;
+  margin-bottom: 0; /* Remove a margem inferior */
+  height: 2rem;
+  text-align: left;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* Estilos para o texto dentro da tag <p> dentro da classe "title-form" */
+.title-text {
+  margin: 0; /* Remove a margem ao redor do texto */
+}
+
+/* Estilos para a classe "box-product-form" */
+.box-product-form {
+  margin-top: 0; /* Remove a margem superior */
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+  border-top: 0;
+  margin-bottom: 1rem;
 }
