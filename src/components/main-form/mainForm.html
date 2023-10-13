@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="/src/style/globalStyle.css">
     <link rel="stylesheet" href="../porduct-form/productFormStyle.css">
+    <link rel="stylesheet" href="../attatcher-form/attatcher-style.css">
     <script src="/portal/resources/js/jquery/jquery.js"></script>
     <script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
     <script src="/portal/resources/js/mustache/mustache-min.js"></script>
@@ -173,17 +174,26 @@
           </div>
           
           <div class="box-product-form">
-            <iframe src="../porduct-form/productForm.html" frameborder="0" width="100%" height="300"></iframe>
+            <iframe id="product-iframe" src="../porduct-form/productForm.html" frameborder="0" width="100%"></iframe>
             <div class="form-group">
               <div class="col-sm-offset-1 col-sm-10">
-                  <button type="button" class="btn btn-default product">Adiconar produto</button>
+                  <button type="button" class="btn btn-default product">Adicionar produto</button>
               </div>
-          </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Submit</button>
+          <div class="box-file-form">
+            <iframe id="file-iframe" src="../attatcher-form/attattcherForm.html" frameborder="0" width="100%" height="300"></iframe>
+            <div class="form-group">
+              <div class="col-sm-offset-1 col-sm-10">
+                  <button type="button" class="btn btn-default product">Incluir Anexo</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group fornecedor">
+            <div class="col-sm-offset-1 col-sm-10">
+                <button type="submit" class="btn btn-default">Salvar Fornecedor</button>
             </div>
         </div>
         </form>
