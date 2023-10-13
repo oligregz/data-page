@@ -1,0 +1,118 @@
+.box-product-form {
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+}
+
+.box-6 {
+  width: 100%;
+  display: inline-flex;
+  padding-bottom: 0.5rem;
+}
+
+.box-6 .form-group.col-xs-3 {
+  margin-right: 0.9rem;
+}
+
+.box-6 .form-group.col-xs-3:last-child {
+  margin-right: 0; 
+}
+
+.product .box-product {
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+.product .box-product .lixeira-icon {
+  margin-right: 2rem; /* Ajusta o espaçamento entre a imagem e a div details-product */
+}
+
+.product .box-product .details-product {
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+.product .box-product .details-product .produto-icon {
+  margin-right: 2rem; /* Ajusta o espaçamento entre a imagem e a div name-product */
+}
+
+.product .box-product .details-product .name-product {
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+.details-product {
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+} 
+
+.box-product {
+  width: 100%; /* Alterado para width: 100% para ocupar 100% da largura do pai */
+  box-sizing: border-box;
+  overflow: hidden; /* Adicionado para esconder o overflow se houver */
+}
+.product .box-product .details-product {
+  display: flex;
+  flex-wrap: nowrap; /* Impede que os filhos quebrem para a próxima linha */
+  overflow: auto; /* Adicionado para permitir rolagem horizontal se necessário */
+}
+
+/* Ajuste na largura dos filhos de .details-product */
+.product .box-product .details-product .produto-icon {
+  max-width: 5rem; /* Tamanho máximo da imagem do produto em "rem" */
+  margin-right: 1rem;
+}
+
+.products-list {
+  list-style-type: none;
+  font-size: 2rem; /* Reduzindo o tamanho da fonte para todos os elementos dentro da .products-list */
+}
+
+/* Ajuste no tamanho do ícone da lixeira */
+.product .box-product .lixeira-icon {
+  max-width: 2rem; /* Tamanho máximo da imagem da lixeira em "rem" */
+  margin-right: 0.5rem;
+  padding: 0.2rem;
+}
+
+/* Ajuste no tamanho do ícone do produto */
+.product .box-product .details-product .produto-icon {
+  max-width: 4rem; /* Tamanho máximo da imagem do produto em "rem" */
+  margin-right: 0.5rem;
+}
+
+/* Ajuste na largura dos inputs */
+.box-6 .form-group input {
+  font-size: 0.8rem; /* Reduzindo o tamanho da fonte para os inputs dentro de .box-6 */
+  width: 5rem; /* Ajustando a largura dos inputs em "rem" */
+}
+
+/* Ajuste nas labels dos inputs */
+.box-6 .form-group label {
+  font-size: 0.8rem; /* Reduzindo o tamanho da fonte para as labels dentro de .box-6 */
+}
+
+.btn-product {
+  background-color: rgb(0, 190, 0);
+  border: 0.2rem solid black;
+  border-radius: 0.2rem;
+  color: white;
+  padding: 1rem;
+  width: 100%; /* Ajustando a largura para 100% */
+  transition: background-color 0.3s; /* Adicionando transição para a mudança de cor */
+}
+
+.btn-product:hover {
+  background-color: rgb(203, 230, 203); /* Alterando a cor ao passar o mouse */
+}
+
+.quadrant-details {
+  padding-right: 0.5rem;
+}
+
+ul {
+ padding: 0.2rem;
+}
+
+.btn-group {
+  font-size: 0.2rem;
+}

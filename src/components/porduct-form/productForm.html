@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://style.fluig.com/css/fluig-style-guide.min.css"
+    />
+    <link rel="stylesheet" href="../../style/globalStyle.css">
+    <link rel="stylesheet" href="./productFormStyle.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form-product">
+      <ul class="products-list">
+        <li class="product">
+          <div class="box-product">
+            <img class="lixeira-icon" src="../../imgs/lixeira.png" alt="lixeira-icon" />
+            <div class="details-product">
+              <img
+                src="../../imgs/icon-product.png"
+                alt="produto-icon"
+                class="produto-icon"
+              />
+
+              <div class="quadrant-details">
+                <div class="name-product">
+                  <div class="form-group col-xs-12">
+                    <label for="produto">Produto</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="produto"
+                    />
+                  </div>
+                </div>
+  
+                <div class="box-6">
+                  <div class="form-group col-xs-3">
+                    <label for="und-medida">UND. Medida</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="und-medida"
+                      required
+                    />
+                  </div>
+                  <div class="form-group col-xs-3">
+                    <label for="qtde-estoque">QTDE. em Estoque</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="qtde-estoque"
+                      required
+                    />
+                  </div>
+                  <div class="form-group col-xs-3">
+                    <label for="valor-unitario">Valor Unitário</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="valor-unitario"
+                      required
+                    />
+                  </div>
+                  <div class="form-group col-xs-3">
+                    <label for="valor-total">Valor Total</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="valor-total"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -10,6 +10,7 @@
       href="https://style.fluig.com/css/fluig-style-guide.min.css"
     />
     <link rel="stylesheet" href="/src/style/globalStyle.css">
+    <link rel="stylesheet" href="../porduct-form/productFormStyle.css">
     <script src="/portal/resources/js/jquery/jquery.js"></script>
     <script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
     <script src="/portal/resources/js/mustache/mustache-min.js"></script>
@@ -21,152 +22,163 @@
       <h2 class="title-page">CADASTRO FORNECEDOR/PRODUTO</h2>
       <div class="box-form">
         <form class="form-horizontal" role="form">
-          <div class="first-quadrant">
-            <div class="box-1">
-              <div class="form-group col-xs-12">
-                <label for="razaoSocial">Razão Social</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="razaoSocial"
-                  required
-                />
+          <div class="quadrants">
+            <div class="first-quadrant">
+              <div class="box-1">
+                <div class="form-group col-xs-12">
+                  <label for="razaoSocial">Razão Social</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="razaoSocial"
+                    required
+                  />
+                </div>
+                <div class="form-group col-xs-12">
+                  <label for="nomeFantasia">Nome Fantasia</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nomeFantasia"
+                    required
+                  />
+                </div>
+                <div id="cep" class="form-group col-xs-8">
+                  <label for="cep">CEP</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cep"
+                    required
+                  />
+                </div>
+                <div class="form-group col-xs-12">
+                  <label for="endereco">Endereço</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="endereco"
+                    required
+                  />
+                </div>
               </div>
-              <div class="form-group col-xs-12">
-                <label for="nomeFantasia">Nome Fantasia</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nomeFantasia"
-                  required
-                />
-              </div>
-              <div id="cep" class="form-group col-xs-8">
-                <label for="cep">CEP</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cep"
-                  required
-                />
-              </div>
-              <div class="form-group col-xs-12">
-                <label for="endereco">Endereço</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="endereco"
-                  required
-                />
+              <div class="box-2">
+                <div class="form-group col-xs-12">
+                  <label for="cnpj">CNPJ</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cnpj"
+                    required
+                  />
+                </div>
+                <div class="form-group col-xs-12">
+                  <label for="inscricaoEstadual">Inscrição Estadual</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inscricaoEstadual"
+                  />
+                </div>
+                <div class="form-group col-xs-12">
+                  <label for="inscricaoMunicipal">Inscrição Municipal</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inscricaoMunicipal"
+                  />
+                </div>
+                <div class="form-group col-xs-12">
+                  <label for="numero">Número</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="numero"
+                  />
+                </div>
               </div>
             </div>
-            <div class="box-2">
-              <div class="form-group col-xs-12">
-                <label for="cnpj">CNPJ</label>
+  
+            <div class="second-quadrant">
+              <div class="form-group col-xs-4">
+                <label for="complemento">Complemento</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="cnpj"
-                  required
+                  id="complemento"
                 />
               </div>
-              <div class="form-group col-xs-12">
-                <label for="inscricaoEstadual">Inscrição Estadual</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inscricaoEstadual"
-                />
+              <div class="box-3">
+                <div class="form-group col-xs-4">
+                  <label for="bairro">Bairro</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="bairro"
+                    required
+                  />
+                </div>
+                <div class="form-group col-xs-4">
+                  <label for="municipio">Município</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="municipio"
+                    required
+                  />
+                </div>
+                <div class="form-group col-xs-4">
+                  <label for="estado">Estado</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="estado"
+                    required
+                  />
+                </div>
               </div>
-              <div class="form-group col-xs-12">
-                <label for="inscricaoMunicipal">Inscrição Municipal</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inscricaoMunicipal"
-                />
-              </div>
-              <div class="form-group col-xs-12">
-                <label for="numero">Número</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="numero"
-                />
+            </div>
+  
+            <div class="third-quadrant">
+              <div class="box-4">
+                <div class="form-group col-xs-5">
+                  <label for="nomepessoacontato">Nome da Pessoa de Contato</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nomepessoacontato"
+                    required
+                  />
+                </div>
+                <div class="form-group col-xs-4">
+                  <label for="telefone">Telefone</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="telefone"
+                    required
+                  />
+                </div>
+                <div class="form-group col-xs-4">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="second-quadrant">
-            <div class="form-group col-xs-12">
-              <label for="complemento">Complemento</label>
-              <input
-                type="text"
-                class="form-control"
-                id="complemento"
-              />
-            </div>
-            <div class="box-3">
-              <div class="form-group col-xs-4">
-                <label for="bairro">Bairro</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="bairro"
-                  required
-                />
+          
+          <div class="box-product-form">
+            <iframe src="../porduct-form/productForm.html" frameborder="0" width="100%" height="300"></iframe>
+            <div class="form-group">
+              <div class="col-sm-offset-1 col-sm-10">
+                  <button type="button" class="btn btn-default product">Adiconar produto</button>
               </div>
-              <div class="form-group col-xs-4">
-                <label for="municipio">Município</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="municipio"
-                  required
-                />
-              </div>
-              <div class="form-group col-xs-4">
-                <label for="estado">Estado</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="estado"
-                  required
-                />
-              </div>
-            </div>
           </div>
-
-          <div class="third-quadrant">
-            <div class="box-4">
-              <div class="form-group col-xs-5">
-                <label for="nomepessoacontato">Nome da Pessoa de Contato</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nomepessoacontato"
-                  required
-                />
-              </div>
-              <div class="form-group col-xs-4">
-                <label for="telefone">Telefone</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="telefone"
-                  required
-                />
-              </div>
-              <div class="form-group col-xs-4">
-                <label for="email">E-mail</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  required
-                />
-              </div>
-            </div>
           </div>
 
           <div class="form-group">
