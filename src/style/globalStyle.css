@@ -20,7 +20,7 @@
 /* Estilizando os inputs de e-mail */
 .form-control[type="email"] {
   border: 0.2rem solid black;
-  border-radius: 0.4rem; /* Adicionando um raio de borda para suavizar as extremidades */
+  border-radius: 0.4rem; 
 }
 
 .form-group label {
@@ -38,7 +38,6 @@
   padding: 1rem;
 }
 
-/* Estilizando os elementos dentro de "box-1" e "box-2" */
 .box-form .first-quadrant {
   display: flex;
   justify-content: space-between;
@@ -46,23 +45,22 @@
 
 .box-form .first-quadrant .box-1,
 .box-form .first-quadrant .box-2 {
-  width: 48%; /* Para deixar um pequeno espaço entre os conteúdos */
-  flex: 1; /* Para que as divs tenham a mesma largura */
-  margin: 0 0.2rem; /* Espaçamento entre as divs */
+  width: 48%; 
+  flex: 1;
+  margin: 0 0.2rem;
 }
 
 .box-form .first-quadrant .form-group {
   margin-bottom: 10px;
 }
 
-/* Estilizando os botões */
 .box-form .first-quadrant button {
-  align-self: flex-end; /* Alinha o botão ao final do contêiner flexível */
+  align-self: flex-end; 
 }
 
 .box-1 {
   display: flex;
-  flex-direction: column; /* Os elementos ficarão dispostos em coluna */
+  flex-direction: column;
 }
 
 .box-1 .form-group {
@@ -96,9 +94,23 @@ body, html {
   border-radius: 1rem;
 }
 
-/* Estilizando os botões */
 .box-form button {
-  margin-top: 3.75rem; /* Atualizado para 60px (considerando 1rem = 16px) */
+  margin-top: 3.75rem;
+}
+
+.box-product-form {
+  min-height: 15rem; 
+  height: auto; 
+  overflow: auto;
+  padding: 1rem; /* Adicionado preenchimento interno */
+  box-sizing: border-box;
+}
+
+#product-iframe {
+  width: 100%; 
+  min-height: 15rem; 
+  height: 100%;
+  border: none; 
 }
 
 /* Opcional: Estilize os títulos se desejar */
@@ -146,8 +158,9 @@ body, html {
   border: 0.2rem solid black;
   border-radius: 0.2rem;
   color: white;
-  padding: 1rem;
+  padding: 0.2rem;
   width: 100%;
+  font-size: 1.2rem;
 }
 
 .col-sm-offset-1.col-sm-10{
