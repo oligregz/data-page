@@ -1,8 +1,11 @@
 .box-file-form {
-  margin-top: 1rem;
+  margin-top: 0;
   border: 0.2rem solid black;
   border-radius: 1rem;
   max-height: 50%;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+  border-top: 0;
 }
 .content {
   display: flex;
@@ -21,6 +24,7 @@
   height: 60vh;
   border: 0.2rem solid black;
   border-radius: 1rem;
+
 }
 
 ul.files-list {
