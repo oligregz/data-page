@@ -1,3 +1,4 @@
+// import getElements from "../../porduct-form/script/index.js";
 import renderObj from "../../../utils/dataJson.js";
 
 const formData = {};
@@ -25,5 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
     formData = {}
   });
 });
+
+// const addProduct = () => {
+//   // chama função que clona os elementos contida no script
+//   // do productForm
+//   console.log("click");
+//   // getElements();
+// }
+
+// document.getElementById('add-product').addEventListener('click', addProduct);
 
 export default formData;
