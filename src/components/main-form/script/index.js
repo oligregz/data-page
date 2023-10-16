@@ -1,12 +1,11 @@
-// import getElements from "../../porduct-form/script/index.js";
 import renderObj from "../../../utils/dataJson.js";
 
 const formData = {};
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form.form-horizontal');
 
-  form.addEventListener('submit', function(event) {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     
     localStorage.clear();
@@ -25,15 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     renderObj()
     formData = {}
   });
+
 });
-
-// const addProduct = () => {
-//   // chama função que clona os elementos contida no script
-//   // do productForm
-//   console.log("click");
-//   // getElements();
-// }
-
-// document.getElementById('add-product').addEventListener('click', addProduct);
 
 export default formData;
