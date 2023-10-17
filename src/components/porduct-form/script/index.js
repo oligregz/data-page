@@ -35,20 +35,16 @@ const updateProductData = (element) => {
 const removeProduct = (element) => {
   const productIndex = element.dataset.index || 0;
 
-  // Remove a li correspondente
   element.closest('.product').remove();
 
-  // Remove a entrada correspondente do objeto productData
   delete productData[productIndex];
   console.log("Updated Product Data:", productData);
 
-  // Atualiza o localStorage após a remoção
   const productKey = 'productData';
   const productDatajson = JSON.stringify(productData);
   localStorage.setItem(productKey, productDatajson);
 };
 
-// Event listener para a remoção de produto
 if (productForm) {
   productForm.addEventListener('click', (event) => {
     if (event.target.classList.contains('lixeira-icon')) {
