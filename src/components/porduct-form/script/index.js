@@ -1,5 +1,8 @@
 const productData = {};
 
+const productForm = document.querySelector('.form-product');
+
+
 const generateProductObject = (element) => {
   const product = {
     descricaoProduto: element.querySelector('#produto').value || '',
@@ -23,11 +26,38 @@ const updateProductData = (element) => {
   console.log("Updated Product Data:", productData);
 
   const productKey = 'productData';
-
   const productDatajson = JSON.stringify(productData);
+  
   console.log(productDatajson);
   localStorage.setItem(productKey, productDatajson);
 };
+
+const removeProduct = (element) => {
+  const productIndex = element.dataset.index || 0;
+
+  // Remove a li correspondente
+  element.closest('.product').remove();
+
+  // Remove a entrada correspondente do objeto productData
+  delete productData[productIndex];
+  console.log("Updated Product Data:", productData);
+
+  // Atualiza o localStorage após a remoção
+  const productKey = 'productData';
+  const productDatajson = JSON.stringify(productData);
+  localStorage.setItem(productKey, productDatajson);
+};
+
+// Event listener para a remoção de produto
+if (productForm) {
+  productForm.addEventListener('click', (event) => {
+    if (event.target.classList.contains('lixeira-icon')) {
+      const productElement = event.target.closest('.product');
+      removeProduct(productElement);
+    }
+  });
+}
+
 
 const updateTotalValue = (element) => {
   const qtdeEstoque = element.querySelector('#qtde-estoque').value;
@@ -55,7 +85,6 @@ const addProduct = () => {
   updateProductData(productChild);
 };
 
-const productForm = document.querySelector('.form-product');
 productForm.addEventListener('input', (event) => {
   if (event.target.classList.contains('form-control')) {
     const productElement = event.target.closest('.product');
