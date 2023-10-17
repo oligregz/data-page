@@ -1,10 +1,11 @@
-{	razaoSocial: 'Razao social',
+{	
+	razaoSocial: 'Razao social',
 	nomeFantasia: 'Nome Fantasia',
 	cnpj: '123456',
 	inscricaoEstadual: '123456',
 	inscricaoMunicipal: '123456',
 	nomeContato: 'Nome contato',
-	telefoneContato: '+5562999999999999'
+	telefoneContato: '+5562999999999999',
 	emailContato: 'email@email.com',
 	produtos: {
 		[ 	indice: 1,
@@ -21,7 +22,7 @@
 			valorUnitario: '1554.00',
 			valorTotal: '2555.00'		
 		],
-	}
+	},
 	anexos: {
 		[ 	indice: 1,
 			nomeArquivo: 'iouahsiuahusihausihiahiuah',
@@ -32,5 +33,4 @@
 			blobArquivo: 'iouahsiuahusihausihiahiuah'
 		],	
 	}
-
 }

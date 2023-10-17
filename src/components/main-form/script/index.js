@@ -1,4 +1,5 @@
 import renderObj from "../../../utils/dataJson.js";
+import productData from "../../porduct-form/script/index.js";
 
 const formData = {};
 
@@ -7,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    
-    localStorage.clear();
 
     const inputs = form.querySelectorAll('input');
     inputs.forEach(input => {
@@ -16,12 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     localStorage.setItem('formData', JSON.stringify(formData));
-    
+    localStorage.setItem('productData', JSON.stringify(productData));
     alert('Dados capturados e armazenados no localStorage.');
-    
-    
+
     form.reset();
-    renderObj()
+    renderObj();
     formData = {}
   });
 

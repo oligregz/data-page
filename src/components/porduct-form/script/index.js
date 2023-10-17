@@ -1,23 +1,32 @@
-const productData = [];
+const productData = {};
 
 const generateProductObject = (element) => {
   const product = {
-    indice: productData.length + 1,
     descricaoProduto: element.querySelector('#produto').value || '',
-    unidadeMedida: element.querySelector('#und-medida').value || '',
-    qtdeEstoque: element.querySelector('#qtde-estoque').value || '',
-    valorUnitario: element.querySelector('#valor-unitario').value || '',
-    valorTotal: element.querySelector('#valor-total').value || ''
+    unidadeMedida: element.querySelector('#und-medida').value || 0,
+    qtdeEstoque: element.querySelector('#qtde-estoque').value || 0,
+    valorUnitario: element.querySelector('#valor-unitario').value || 0,
+    valorTotal: element.querySelector('#valor-total').value || 0
   };
 
   return product;
 };
 
 const updateProductData = (element) => {
-  const productIndex = element.dataset.index;
+  const productIndex = element.dataset.index || 0; 
+  if (!productData[productIndex]) {
+    productData[productIndex] = [];
+  }
+
   const product = generateProductObject(element);
-  productData[productIndex] = product;
+  productData[productIndex][0] = product;
   console.log("Updated Product Data:", productData);
+
+  const productKey = 'productData';
+
+  const productDatajson = JSON.stringify(productData);
+  console.log(productDatajson);
+  localStorage.setItem(productKey, productDatajson);
 };
 
 const updateTotalValue = (element) => {
@@ -26,25 +35,24 @@ const updateTotalValue = (element) => {
   const valorTotal = parseFloat(qtdeEstoque) * parseFloat(valorUnitario);
   element.querySelector('#valor-total').value = valorTotal.toFixed(2);
   
-  // Atualizar o objeto de produto
   updateProductData(element);
 };
 
 const addProduct = () => {
   const productsList = document.querySelector('.products-list');
   const productChild = productsList.firstElementChild.cloneNode(true);
-  
-  // Adicionar um índice (data-index) para identificar o produto
-  const currentIndex = productData.length;
+
+  const currentIndex = Object.keys(productData).length;
   productChild.dataset.index = currentIndex;
 
-  // Limpar os valores dos inputs no novo produto
   const inputs = productChild.querySelectorAll('.form-control');
   inputs.forEach(input => {
     input.value = '';
   });
 
   productsList.appendChild(productChild);
+
+  updateProductData(productChild);
 };
 
 const productForm = document.querySelector('.form-product');
@@ -56,3 +64,5 @@ productForm.addEventListener('input', (event) => {
 });
 
 document.getElementById('add-product').addEventListener('click', addProduct);
+
+export default productData;
