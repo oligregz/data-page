@@ -10,6 +10,7 @@ const getNewLi = (fileName) => {
     docFile.textContent = fileName || 'Adicionar Documento';
     filesList.appendChild(clonedLi);
     attachFileListener(clonedLi);
+    attachDeleteListener(clonedLi);
   }
 }
 
@@ -33,7 +34,19 @@ const attachFileListener = (li) => {
   });
 };
 
-attachFileListener(document.querySelector('.file'));
+const attachDeleteListener = (li) => {
+  const deleteIcon = li.querySelector('.lixeira-icon');
+  deleteIcon.addEventListener('click', (event) => {
+    event.stopPropagation();
+    li.remove();
+  });
+};
+
+const firstLi = document.querySelector('.file');
+if (firstLi) {
+  attachFileListener(firstLi);
+  attachDeleteListener(firstLi);
+}
 
 document.querySelector('.form-group button.product').addEventListener('click', () => {
   getNewLi();
