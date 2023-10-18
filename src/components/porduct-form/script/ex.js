@@ -23,7 +23,8 @@
 			valorTotal: '2555.00'		
 		],
 	},
-	anexos: {
+	anexos:
+	{
 		[ 	indice: 1,
 			nomeArquivo: 'iouahsiuahusihausihiahiuah',
 			blobArquivo: 'iouahsiuahusihausihiahiuah'
