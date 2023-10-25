@@ -1,7 +1,6 @@
 const getUrlFile = (fileObject) => {
   const url = URL.createObjectURL(fileObject);
   localStorage.setItem("urlFile", JSON.stringify(url));
-  const local = localStorage.getItem("urlFile");
 }
 
 const getUrlFileFromLocalStorage = () => {
@@ -11,6 +10,7 @@ const getUrlFileFromLocalStorage = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const embed = document.querySelector('.myPdfEmbed');
+  const ifr = document.querySelector(".if");
   const url = getUrlFileFromLocalStorage();
   embed.src = url;
 });
