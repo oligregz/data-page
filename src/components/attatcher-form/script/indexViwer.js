@@ -4,15 +4,19 @@ const getBlobFile = (file) => {
     localStorage.removeItem("blobFile");
   }
   const urlBlob = URL.createObjectURL(blob);
-  console.log(urlBlob)
-  localStorage.setItem(JSON.stringify(urlBlob));
+  
+  const parts = urlBlob.split("/");
+  const code = parts[parts.length - 1];
+
+  localStorage.setItem("blobUrl", JSON.stringify(urlBlob));
+  localStorage.setItem("blobCode", JSON.stringify(code));
   URL.revokeObjectURL(urlBlob);
 }
 
 const getUrlFile = (fileObject) => {
   const url = URL.createObjectURL(fileObject);
-  localStorage.setItem("urlFile", JSON.stringify(url));
   getBlobFile(fileObject);
+  localStorage.setItem("urlFile", JSON.stringify(url));
 }
 
 const getUrlFileFromLocalStorage = () => {
