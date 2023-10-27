@@ -63,39 +63,11 @@ const attachDeleteListener = (li) => {
   });
 };
 
-const attachDownloadListener = (li) => {
-  const downloadIcon = li.querySelector(".visualizar-icon");
-  downloadIcon.addEventListener("click", (event) => {
-    event.stopPropagation();
-
-    const docFile = li.querySelector(".doc-file");
-    const fileName = docFile.textContent.trim();
-    const fileContent = li.querySelector(".content").dataset.fileContent || "";
-
-    if (fileContent) {
-      const bytes = new Uint8Array(fileContent.split(",").map(Number));
-      const blob = new Blob([bytes], { type: "application/pdf" });
-
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = fileName;
-      a.style.display = "none";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-
-      URL.revokeObjectURL(url);
-    }
-  });
-};
-
 const firstLi = document.querySelector(".file");
 if (firstLi) {
   attachFileListener(firstLi);
   attachViewListener(firstLi);
   attachDeleteListener(firstLi);
-  // attachDownloadListener(firstLi);
 }
 
 document
