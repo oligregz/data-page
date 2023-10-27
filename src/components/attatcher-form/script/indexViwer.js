@@ -1,3 +1,8 @@
+const download = (element, url) => {
+  element.href = url;
+  element.click();
+} 
+
 const getBlobFile = (file) => {
   const blob = new Blob([file], {type: 'application/pdf'});
   if(localStorage.getItem("blobFile")) {
@@ -26,8 +31,10 @@ const getUrlFileFromLocalStorage = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const embed = document.querySelector('.myPdfEmbed');
+  const elementADownload = document.querySelector('.downloadButton');
   const url = getUrlFileFromLocalStorage();
   embed.src = url;
+  download(elementADownload, url);
 });
 
 export default getUrlFile;
